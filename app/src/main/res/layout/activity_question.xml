@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.QuestionActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top|center"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:gravity="center"
+            android:text="@string/FlagQuestion"/>
+
+        <ImageView
+            android:id="@+id/countryFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/country_flag"
+            android:layout_margin="20dp"
+            tools:src="@drawable/germany_flag"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="9.5"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="false"
+                android:max="10"
+                android:minHeight="50dp"
+                tools:progress="8"/>
+            
+            <TextView
+                android:id="@+id/textViewProgress"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                tools:text="2/10"
+                android:layout_weight="0.5"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option11"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            tools:text="option 1"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="true"
+            android:background="@drawable/option_bg1"
+            android:minHeight="50dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option22"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            tools:text="option 2"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="true"
+            android:background="@drawable/option_bg1"
+            android:minHeight="50dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option33"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            tools:text="option 3"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="true"
+            android:background="@drawable/option_bg1"
+            android:minHeight="50dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option44"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            tools:text="option 4"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="true"
+            android:background="@drawable/option_bg1"
+            android:minHeight="50dp"/>
+        <!--nothing serious, just checking out writing notes in xml code-->
+
+        <Button
+            android:id="@+id/checkAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkButton"
+            android:layout_marginTop="20dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

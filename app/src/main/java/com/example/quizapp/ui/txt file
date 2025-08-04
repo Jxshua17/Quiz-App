@@ -1,0 +1,76 @@
+so what i want to do here is write down the appropriate logic and then implement that instead.
+
+of course, the first thing is the greeting page which you are greeted with. then you are taken to the next screen which then...
+...takes you to the first screen of the quiz. so this is where things get very tricky. very very tricky.
+
+so the page is loaded with all of the different views including the textViews and the buttons with the image views too.
+one of the buttons has to be selected first. the check answer button can't be clicked at all without an option selected. that's the goal.
+
+so if the button is clicked, only then can the check answer button invoke the check answer function. so what i was trying to...
+...do was to make sure an variable x is incremented when a button is clicked. the variable x is initialised with 0.
+
+button is clicked, x gets incremented. if x = 1, the checkAns function would go ahead and do it's job but if not,
+a toast message would come up on screen.
+
+
+the answered variable that Alex put in here, i am really struggling to see the point of it. back to that later.
+
+so the issue i kept on having was the setQuestions function, that was the thing giving me issue.
+i seem to have solved it. the only issue now is going to the next page. i think understanding the flow of...
+...this code seems to be the main concern now. if i can just understand it, i think i'll understand everything.
+
+so when would i want to call the setQuestion function? when the answer has been checked.
+
+i have solved one challenge which is the page refusing to reset, i can't remember the exact problem but i know...
+..that i have fixed it. one thing to do now is to invoke the check answer function.
+checkAns function still not getting invoked.
+
+just as i suspected. the answered boolean variable doesn't really do anything.
+
+funny how i left the first issue of trying to display the final activity to fix this current issue of going to the next question.
+
+i think the checkAnswer function is pretty tight.
+
+it is an easy three step process.
+
+step1: choose answer.
+step2: checkAnswer function is called.(the 'next' text is displayed which is part of this function)
+step3: set question function is called but it is the next id that is called. why is the id not called at all.
+
+#i think am capable of writing cleaner code than what Alex has written for this app.
+#i think there has always been a fear on my part regarding if else statements. and i think it stems from my....
+..residual knowledge of python. if you start with an 'if' and go to 'elif' you have to finish with else or maybe...
+...that isn't the case and i just thought different.
+
+
+i think just typing would help me think about this problem better honestly.
+i am trying to test the app to see what exactly is going on before i dive into trying to fix anything...
+...wrong with the logic of the code.
+
+so i have managed to get the app to work up to the point of the next text displaying on the button below.
+i just can't go to the next page of the questions activity which means the questions activity is not...
+..refreshing or reloading as was the case when Alex wrote his own code. so much for me rewriting this thing...
+..just to get it to not go to the next page when an option is selected.
+ i just have to figure out where the problem is coming from. i am confident that i will.
+ what i have to fix now is just making sure the page reloads.
+
+#just an aside, i just noticed that i got i was sleepy a few moments ago, i might still be, i don't feel...
+...it when i start thinking about this problem. something i have noticed while doing math as well.
+i think my mind just makes sleep disappear when it goes into problem solving mode.
+
+12:40-i just tried deleting certain pages that were part of the app but were not active.
+12:47-didn't fix the issue. all i did was clan the code.
+12:52-i have come up with a solution but it is not elegant. it involves adding a button to just go...
+...to the next page rather than having the check answer button changing but what if this is what a company...
+...wants or a client. i have to figure it out.
+13:13-i think i might have to inspect every single line of this code.
+
+i think what might help to know the answers gotten correctly is keeping a counter in the highlighter...
+..function which tells you that an answer is correct once you check answer.
+
+now, i am going to try and work on rearranging the functions so that i have a top down approach to understanding the different functions.
+
+15:50-yunno what, i am tired of this. i could keep at it but not for now. maybe i could try something later...
+...maybe this is where knowledge of git would prove helpful because i want to return to this later on.
+
+

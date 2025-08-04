@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcomeMessage">Welcome to the Quiz App</string>
+    <string name="startButton">Start Quiz</string>
+    <string name="Question1">Question 1</string>
+    <string name="Question2">Question 2</string>
+    <string name="Question3">Question 3</string>
+    <string name="Question4">Question 4</string>
+    <string name="Question5">Question 5</string>
+    <string name="Question6">Question 6</string>
+    <string name="Question7">Question 7</string>
+    <string name="Question8">Question 8</string>
+    <string name="Question9">Question 9</string>
+    <string name="Question10">Question 10</string>
+    <string name="FlagQuestion">What country\'s flag is this?</string>
+    <string name="argentina">Argentina</string>
+    <string name="england">England</string>
+    <string name="france">France</string>
+    <string name="germany">Germany</string>
+    <string name="nigeria">Nigeria</string>
+    <string name="checkButton">Check Answer</string>
+    <string name="nextButton">NEXT</string>
+    <string name="checkButton2">Check score</string>
+    <string name="please_enter_your_name">please enter your name</string>
+    <string name="name">Name</string>
+    <string name="proceed">Proceed</string>
+    <string name="country_flag">country flag</string>
+    <string name="finish">FINISH</string>
+    <string name="congratsMessage">Hey, Congratulations.</string>
+    <string name="username">Username</string>
+    <string name="score">Your score out of 10 is 9</string>
+    <string name="result">Result</string>
+</resources>
