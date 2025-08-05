@@ -73,6 +73,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
     //this function resets just the colors and text style of the options.
     private fun resetOptions (){
+        x = 0
         val option = mutableListOf<TextView>()
         option.add(optionOne) //this adds the element in the bracket to the list defined above.
         option.add(optionTwo)
@@ -144,7 +145,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
 
     private fun selectedOption(textView: TextView, selAnswer:Int){ //this function has to take in arguments for the parameters i will define.
-        //resetOptions()
+        resetOptions()
 
         //questionsCounter = selectedOption
         selectedAnswer = selAnswer
