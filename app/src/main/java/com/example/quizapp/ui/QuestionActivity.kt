@@ -39,6 +39,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private var answered = false
     private var x = 0
     private var y = 0
+    private var z = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -105,13 +106,15 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         //the below code does a very simple job which is just to check if we gotten to the very last page of the app and what should be displayed in one of the buttons.
 
         //private var questionsCounter = 0
+
+
         if(questionsCounter < questionsList.size){ //currentPosition would always be less than the size of the question because it doesn't increment at all.
             checkAnswer.text = getString(R.string.checkButton)
             currentQuestion = questionsList[questionsCounter]
 
             resetOptions()
             val question = questionsList[questionsCounter]
-            progressBar.progress = questionsCounter
+            progressBar.progress = questionsCounter + 1
             flagImageView.setImageResource(question.image)
             textViewProgressBar.text = "${questionsCounter + 1}/${progressBar.max}"
             optionOne.text = question.optionOne
@@ -153,7 +156,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
         textView.setTextColor(Color.GRAY)
         textView.typeface = Typeface.DEFAULT_BOLD
-        textView.setBackgroundResource(R.drawable.option_bg)
+        textView.setBackgroundResource(R.drawable.option3)
 
 
     }
@@ -192,6 +195,9 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 } else if (y == 0){
                     Toast.makeText(this@QuestionActivity, "please, check your answer", Toast.LENGTH_SHORT).show()
                 }
+                if (z == questionsList.size){
+                    nextButton.text = getString(R.string.finish)
+                }
             }
 
         }
@@ -219,7 +225,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             highlightAnswer(currentQuestion.correctAnswer)
             //i actually did it. i can't believe it. i just came up with this just from thinking alone.
             y++
-
+            z++
         }
 
         //checkAnswer.text = getString(R.string.nextButton)
