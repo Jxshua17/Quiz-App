@@ -120,10 +120,11 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             optionFour.text = question.optionFour
 
         } else {
-            checkAnswer.text = getString(R.string.finish)
+            nextButton.text = getString(R.string.finish)
             //the final activity gets started here
             Intent(this, FinalActivity::class.java).also {
                 startActivity(it)
+                finish()
                 //in the video, alex just put in 'this' without putting the activity so i am going to run it just to see.
             }
         }
@@ -183,6 +184,11 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             R.id.nextButton -> {
                 if(y >= 1){
                     setQuestions()
+                } else if (x==0){
+                    resetOptions()
+                    selectedAnswer = 0
+                    Toast.makeText(this@QuestionActivity, "please, select an option", Toast.LENGTH_SHORT).show()
+                    //implementation worked perfectly.
                 } else if (y == 0){
                     Toast.makeText(this@QuestionActivity, "please, check your answer", Toast.LENGTH_SHORT).show()
                 }
