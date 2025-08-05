@@ -16,6 +16,8 @@ import com.example.quizapp.model.Questions
 import com.example.quizapp.utils.Constants
 import kotlinx.coroutines.delay
 
+//na the bastard wey dey give me wahala be this.
+
 class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var progressBar: ProgressBar
     private lateinit var textViewProgressBar: TextView
