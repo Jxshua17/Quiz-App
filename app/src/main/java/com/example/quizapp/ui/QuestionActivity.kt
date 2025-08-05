@@ -28,6 +28,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var optionThree: TextView
     private lateinit var optionFour: TextView
     private lateinit var checkAnswer: Button
+    private lateinit var nextButton: Button
 
     private var currentPosition = 1
     private lateinit var questionsList: MutableList<Questions>
@@ -51,6 +52,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         optionThree = findViewById(R.id.option33)
         optionFour = findViewById(R.id.option44)
         checkAnswer = findViewById(R.id.checkAnswer)
+        nextButton = findViewById(R.id.nextButton)
 
         questionsList = Constants.getQuestions()
 
@@ -60,6 +62,8 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         optionFour.setOnClickListener(this)
 
         checkAnswer.setOnClickListener(this)
+
+        nextButton.setOnClickListener(this)
 
         //so the above basically does what it looks like which is connecting the object to the ui components
 
@@ -124,6 +128,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         x = 0
+        y = 0
         questionsCounter++
         answered = false
 
@@ -171,6 +176,15 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(this@QuestionActivity, "please, select an option", Toast.LENGTH_SHORT).show()
 
                 }
+                y++
+            }
+
+            R.id.nextButton -> {
+                if(y >= 1){
+                    setQuestions()
+                } else if (y == 0){
+                    Toast.makeText(this@QuestionActivity, "please, check your answer", Toast.LENGTH_SHORT).show()
+                }
             }
 
         }
@@ -201,7 +215,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
         }
 
-        checkAnswer.text = getString(R.string.nextButton)
+        //checkAnswer.text = getString(R.string.nextButton)
 
 
         //setQuestions()

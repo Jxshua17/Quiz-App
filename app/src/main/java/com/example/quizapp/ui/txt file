@@ -75,3 +75,11 @@ now, i am going to try and work on rearranging the functions so that i have a to
 
 i like the idea of github actually. you can work remotely on any machine by just logging on to your github there, work on code...
 ...and then commit and test when you have your machine. i can go to sena's place without my laptop and work with hers.
+
+
+i am still encountering the same problem of the next page not reloading which means there must be something wrong with the...
+...setQuestions() function which would mean that to fix it in this branch would be fixing it in the previous branch.
+
+03:06: the reloading of the images and options that is the setQuestions() function iw working as long as you're getting all...
+...of the answers correctly. another bug has been identified, you can click multiple options which isn't supposed to be.
+what remains is the sending of the name from the first activity to the very last activity

@@ -119,6 +119,12 @@
             android:text="@string/checkButton"
             android:layout_marginTop="20dp"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nextButton"
+            android:id="@+id/nextButton"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.core.widget.NestedScrollView>
