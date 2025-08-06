@@ -83,3 +83,7 @@ i am still encountering the same problem of the next page not reloading which me
 03:06: the reloading of the images and options that is the setQuestions() function iw working as long as you're getting all...
 ...of the answers correctly. another bug has been identified, you can click multiple options which isn't supposed to be.
 what remains is the sending of the name from the first activity to the very last activity
+
+06/08
+01:03:nothing much to see here. i just ned to confirm that my github account is actually the one pushing commits to github...
+...rather than shreax which is the name of my local machine.
