@@ -195,9 +195,10 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 } else if (y == 0){
                     Toast.makeText(this@QuestionActivity, "please, check your answer", Toast.LENGTH_SHORT).show()
                 }
-                if (z == questionsList.size){
+                if (currentQuestion.id == questionsList.size){
                     nextButton.text = getString(R.string.finish)
                 }
+                z++
             }
 
         }
@@ -225,7 +226,6 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             highlightAnswer(currentQuestion.correctAnswer)
             //i actually did it. i can't believe it. i just came up with this just from thinking alone.
             y++
-            z++
         }
 
         //checkAnswer.text = getString(R.string.nextButton)
