@@ -90,3 +90,31 @@ what remains is the sending of the name from the first activity to the very last
 01:30: testing another. let us see.
 01:38: not looking good at all.
 02:26: looking good so far. it is all about the fucking main branch.
+
+07:10: so what exactly is the problem at this point? i am unable to send data from one activity to the next
+
+07/08
+11:24: i haven't been available for most of the day so here i am now trying to get some work done.
+11:26: the only issue now is passing the data well enough to th last activity which is giving me a bit of an issue.
+
+08/08
+02:36: removing the .text portion of the editText.text.toString() just to see if it makes any difference.
+02:37: i can't commit without solving this issue.
+02:38: i am going to try adding a few more questions after fixing this issue to see if the code still stands...
+...with additions. i just want to make sure the code is robust and not catered to 10 questions.
+
+03:10: so i have a suspicion of what exactly is going on. when the intent in mainActivity0.1 is started, that data gets sent...
+...to the mainActivity and not the QuestionsActivity as i have been thinking all this while. so what if i just bypass all this by...
+...sending the activity straight to the finalActivity and we shall see what happens. so to fix this, i have to create a new intent..
+...in the very first activity. i like this so far.
+
+03:27: the solution just implemented didn't work. i don't think it is wise to have two intents the way i have set it up.
+so i think the wise thing to do would be to send the data, sent from mainActivity0.1 to mainActivity, to the QuestionsActivity.
+i think this should work. still has a bit of Alex's code smelling all over this shit.
+
+03:54: locking in for the next hour.
+
+03:57: so the way i see it, there are basically just three activities when it comes ot
+04:03: I FUCKING FIXED IT!!!!! HAHAHAHAHAHAHAHAHAHAHAHA!
+04:18: funny thing about this is how it was just thinking through the problem that helped and not some solution online or some explanation.
+i am so proud of myself.

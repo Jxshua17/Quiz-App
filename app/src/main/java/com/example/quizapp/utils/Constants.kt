@@ -4,6 +4,11 @@ import com.example.quizapp.R
 import com.example.quizapp.model.Questions
 
 object Constants{
+
+    const val USERNAME = "name"
+    const val TOTAL_QUESTIONS = "totalQuestions" //this is the key that is talking about the RHS
+    const val SCORE = "score" //i am not sure anymore. lol
+
     fun getQuestions():MutableList<Questions>{ //the mutable list here serves the function of defining what it to returned.
         val questions = mutableListOf<Questions>()
 

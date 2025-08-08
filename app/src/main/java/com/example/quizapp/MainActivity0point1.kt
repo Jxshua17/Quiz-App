@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.quizapp.ui.FinalActivity
+import com.example.quizapp.utils.Constants
 
 class MainActivity0point1 : AppCompatActivity() {
     //private lateinit var button: Button
@@ -22,6 +24,7 @@ class MainActivity0point1 : AppCompatActivity() {
         button.setOnClickListener {
             if (editText.text.isNotEmpty()){
                 Intent(this@MainActivity0point1, MainActivity::class.java).also {
+                    it.putExtra(Constants.USERNAME, editText.text.toString())
                     startActivity(it)
                     finish()
                 }

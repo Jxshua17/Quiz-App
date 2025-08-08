@@ -40,6 +40,9 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private var x = 0
     private var y = 0
     private var z = 1
+    private lateinit var name: String
+    private var totalQuestion = 0
+    private var totalScore = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,6 +72,13 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         //so the above basically does what it looks like which is connecting the object to the ui components
 
         setQuestions()
+        name = intent.getStringExtra(Constants.USERNAME)!!
+
+        /*if(intent.hasExtra(Constants.USERNAME)){
+            name = intent.getStringExtra(Constants.USERNAME)!!
+        }*/
+        //i think it makes no sense to put this here in my own case considering the fact that i put in....
+        //...a condition to only start the next activity if some text has been passed to the editText column.
 
     }
 
@@ -123,9 +133,12 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             optionFour.text = question.optionFour
 
         } else {
-            nextButton.text = getString(R.string.finish)
+            //nextButton.text = getString(R.string.finish)
             //the final activity gets started here
-            Intent(this, FinalActivity::class.java).also {
+            Intent(this@QuestionActivity, FinalActivity::class.java).also {
+                it.putExtra(Constants.USERNAME, name)
+                it.putExtra(Constants.TOTAL_QUESTIONS, questionsList.size)
+                it.putExtra(Constants.SCORE, totalScore)
                 startActivity(it)
                 finish()
                 //in the video, alex just put in 'this' without putting the activity so i am going to run it just to see.
@@ -195,10 +208,12 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 } else if (y == 0){
                     Toast.makeText(this@QuestionActivity, "please, check your answer", Toast.LENGTH_SHORT).show()
                 }
+
                 if (currentQuestion.id == questionsList.size){
                     nextButton.text = getString(R.string.finish)
+                    //setQuestions() //so the app crashes at question 9
                 }
-                z++
+
             }
 
         }
@@ -208,6 +223,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         answered = true
 
         if (selectedAnswer == currentQuestion.correctAnswer){
+            totalScore++
             highlightAnswer(selectedAnswer)
             } else {
             when(selectedAnswer){
